@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epic Christmas & New Year 2025! 🎄🎮</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600;700;800&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        overflow-x: hidden;
+        color: white;
+      }
+
+      .snow {
+        position: fixed;
+        top: -10px;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+      }
+
+      .snowflake {
+        position: absolute;
+        top: -10px;
+        color: white;
+        font-size: 1em;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+      }
+
+      .game-title {
+        font-family: "Press Start 2P", cursive;
+        font-size: 3em;
+        color: #fff;
+        text-shadow: 4px 4px 0px #ff0080, 8px 8px 0px #00ff80;
+        animation: glitch 2s infinite;
+        margin-bottom: 30px;
+      }
+
+      @keyframes glitch {
+        0%,
+        100% {
+          transform: translate(0);
+        }
+        25% {
+          transform: translate(-2px, 2px);
+        }
+        50% {
+          transform: translate(2px, -2px);
+        }
+        75% {
+          transform: translate(-2px, -2px);
+        }
+      }
+
+      .subtitle {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      .meme-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 50px 0;
+      }
+
+      .meme-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 30px;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+        animation: slideUp 0.6s ease forwards;
+        opacity: 0;
+      }
+
+      .meme-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .meme-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .meme-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .meme-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .meme-card:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+      .meme-card:nth-child(6) {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes slideUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .meme-card {
+        transform: translateY(50px);
+      }
+
+      .meme-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        border-color: #fff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .meme-emoji {
+        font-size: 4em;
+        margin-bottom: 15px;
+        animation: bounce 1s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .meme-title {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .meme-text {
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+
+      .achievement-box {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border-radius: 20px;
+        padding: 40px;
+        margin: 50px 0;
+        text-align: center;
+        animation: wiggle 3s infinite;
+        border: 4px solid white;
+      }
+
+      @keyframes wiggle {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-1deg);
+        }
+        75% {
+          transform: rotate(1deg);
+        }
+      }
+
+      .achievement-title {
+        font-family: "Press Start 2P", cursive;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .level-up {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        border-radius: 20px;
+        padding: 50px;
+        margin: 50px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .level-up::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          45deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        animation: shine 3s infinite;
+      }
+
+      @keyframes shine {
+        0% {
+          transform: translateX(-100%) translateY(-100%) rotate(45deg);
+        }
+        100% {
+          transform: translateX(100%) translateY(100%) rotate(45deg);
+        }
+      }
+
+      .big-text {
+        font-size: 2.5em;
+        font-weight: 800;
+        margin: 30px 0;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      .final-message {
+        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        border-radius: 20px;
+        padding: 50px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 1.8;
+        color: #2c3e50;
+        font-weight: 600;
+      }
+
+      .button-container {
+        text-align: center;
+        margin: 50px 0;
+      }
+
+      .epic-button {
+        font-family: "Press Start 2P", cursive;
+        font-size: 1.2em;
+        padding: 20px 40px;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        border: 4px solid white;
+        border-radius: 15px;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        animation: buttonPulse 2s infinite;
+      }
+
+      @keyframes buttonPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .epic-button:hover {
+        transform: scale(1.15) rotate(-2deg);
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+      }
+
+      .fireworks {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9998;
+      }
+
+      .firework {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        animation: explode 1s ease-out forwards;
+      }
+
+      @keyframes explode {
+        0% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(var(--x), var(--y));
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .game-title {
+          font-size: 1.5em;
+        }
+        .subtitle {
+          font-size: 1.2em;
+        }
+        .big-text {
+          font-size: 1.8em;
+        }
+        .meme-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="snow"></div>
+    <div class="fireworks"></div>
+    <div class="container">
+      <div class="hero">
+        <h1 class="game-title">CHRISTMAS 2024<br />NEW YEAR 2025</h1>
+        <p class="subtitle">🎮 LEVEL UP UNLOCKED 🎮</p>
+      </div>
+
+      <div class="achievement-box">
+        <div class="achievement-title">🏆 ACHIEVEMENT UNLOCKED 🏆</div>
+        <div class="big-text">SURVIVED ANOTHER SCHOOL YEAR!</div>
+        <p style="font-size: 1.2em">
+          +1000 XP • +999 Friendship Points • +∞ Memories
+        </p>
+      </div>
+
+      <div class="meme-grid">
+        <div class="meme-card">
+          <div class="meme-emoji">😴</div>
+          <div class="meme-title">Monday Mornings Be Like</div>
+          <div class="meme-text">
+            "I can't believe it's Monday again... didn't we just have
+            Monday?"<br /><br />But we showed up anyway! Legend status! 🏅
+          </div>
+        </div>
+
+        <div class="meme-card">
+          <div class="meme-emoji">📚</div>
+          <div class="meme-title">Exam Week Energy</div>
+          <div class="meme-text">
+            "Me: I'll start studying early this time<br />Also me: *Studies at 2
+            AM*"<br /><br />Yet somehow we ALL passed! Respect! 💯
+          </div>
+        </div>
+
+        <div class="meme-card">
+          <div class="meme-emoji">🤝</div>
+          <div class="meme-title">Group Projects</div>
+          <div class="meme-text">
+            "There's always that ONE person who carries...<br />And someone who
+            shows up last minute with ONE slide"<br /><br />But we made it work!
+            Teamwork! 🎯
+          </div>
+        </div>
+
+        <div class="meme-card">
+          <div class="meme-emoji">😂</div>
+          <div class="meme-title">Class Jokes Hit Different</div>
+          <div class="meme-text">
+            "Teacher: Why is everyone laughing?<br />Us: You wouldn't get it"<br /><br />Those
+            inside jokes = GOLD! 🤣
+          </div>
+        </div>
+
+        <div class="meme-card">
+          <div class="meme-emoji">🍕</div>
+          <div class="meme-title">Lunch Break = Best Break</div>
+          <div class="meme-text">
+            "The only class where attendance is 100%"<br /><br />Food + Friends
+            = Peak happiness! 🌟
+          </div>
+        </div>
+
+        <div class="meme-card">
+          <div class="meme-emoji">💪</div>
+          <div class="meme-title">Friday Vibes</div>
+          <div class="meme-text">
+            "Teacher: We have homework<br />Brain: Already in weekend mode"<br /><br />But
+            we survived! Champions! 👑
+          </div>
+        </div>
+      </div>
+
+      <div class="level-up">
+        <div style="position: relative; z-index: 1">
+          <div class="big-text">⚡ LEVEL UP! ⚡</div>
+          <p style="font-size: 1.3em; margin: 20px 0">
+            YOU'VE REACHED: <strong>YEAR 2025</strong>
+          </p>
+          <p style="font-size: 1.2em; line-height: 1.8">
+            NEW SKILLS UNLOCKED:<br />
+            ✨ Better Study Habits<br />
+            ✨ Stronger Friendships<br />
+            ✨ More Confidence<br />
+            ✨ Epic Comeback Energy<br />
+            ✨ Main Character Vibes
+          </p>
+        </div>
+      </div>
+
+      <div class="final-message">
+        <div style="font-size: 2em; margin-bottom: 20px">
+          🎄 MERRY CHRISTMAS! 🎄
+        </div>
+        <p>
+          Time to rest, eat cookies, open presents, and enjoy the break! You
+          deserve it! 🎁
+        </p>
+        <br />
+        <div style="font-size: 2em; margin: 30px 0">
+          🎆 HAPPY NEW YEAR 2025! 🎆
+        </div>
+        <p>
+          Let's make this year LEGENDARY! New goals, new achievements, new
+          memories!
+        </p>
+        <br />
+        <p style="font-size: 1.4em; margin-top: 30px">
+          To our AMAZING class:<br />
+          You're not just classmates...<br />
+          You're the SQUAD! 💯<br />
+          The DREAM TEAM! 🚀<br />
+          The LEGENDS! 🏆
+        </p>
+        <br />
+        <div style="font-size: 2em; margin-top: 40px; font-weight: 800">
+          LET'S GOOOO 2025! 🔥🎉🎊
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button class="epic-button" onclick="celebrate()">
+          CLICK FOR EPIC CELEBRATION! 🎉
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Snowfall effect
+      function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.innerHTML = ["❄", "❅", "❆"][Math.floor(Math.random() * 3)];
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.animationDuration = Math.random() * 3 + 5 + "s";
+        snowflake.style.opacity = Math.random();
+        snowflake.style.fontSize = Math.random() * 1 + 0.5 + "em";
+        document.querySelector(".snow").appendChild(snowflake);
+
+        setTimeout(() => snowflake.remove(), 8000);
+      }
+
+      setInterval(createSnowflake, 200);
+
+      // Fireworks effect
+      function createFirework(x, y) {
+        const colors = ["#ff0080", "#00ff80", "#ffff00", "#00ffff", "#ff00ff"];
+        const fireworksContainer = document.querySelector(".fireworks");
+
+        for (let i = 0; i < 30; i++) {
+          const firework = document.createElement("div");
+          firework.classList.add("firework");
+          firework.style.left = x + "px";
+          firework.style.top = y + "px";
+          firework.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+          const angle = (Math.PI * 2 * i) / 30;
+          const distance = Math.random() * 200 + 100;
+          firework.style.setProperty("--x", Math.cos(angle) * distance + "px");
+          firework.style.setProperty("--y", Math.sin(angle) * distance + "px");
+
+          fireworksContainer.appendChild(firework);
+          setTimeout(() => firework.remove(), 1000);
+        }
+      }
+
+      function celebrate() {
+        // Multiple fireworks
+        for (let i = 0; i < 5; i++) {
+          setTimeout(() => {
+            createFirework(
+              Math.random() * window.innerWidth,
+              Math.random() * window.innerHeight
+            );
+          }, i * 300);
+        }
+
+        // Confetti effect
+        const button = document.querySelector(".epic-button");
+        button.textContent = "LEGENDARY! 🎊";
+        setTimeout(() => {
+          button.textContent = "CLICK FOR EPIC CELEBRATION! 🎉";
+        }, 2000);
+      }
+
+      // Random fireworks
+      setInterval(() => {
+        if (Math.random() > 0.7) {
+          createFirework(
+            Math.random() * window.innerWidth,
+            Math.random() * window.innerHeight * 0.5
+          );
+        }
+      }, 3000);
+    </script>
+  </body>
+</html>
